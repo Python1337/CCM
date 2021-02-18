@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<form class="mt-5 login" method="post" >
+  <h2>Log In</h2>
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button class="btn btn-dark login-btn" type="submit">Log In</button>
+</form>
+<a class="btn btn-dark login-btn mt-5 text-align: center" href= "/accounts/signup/" >Dont have account? SignUp now!</a>
+{% endblock content %}
